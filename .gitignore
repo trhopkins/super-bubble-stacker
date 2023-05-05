@@ -1,0 +1,8 @@
+# Node-managed directories
+node_modules/
+dist/
+.vscode/
+
+# temporary editor files
+.DS_Store
+.env*
