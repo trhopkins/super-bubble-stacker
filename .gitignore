@@ -1,7 +1,10 @@
+# Editor files
+.vscode/
+.DS_Store
+
 # Node-managed directories
 node_modules/
 dist/
-.vscode/
 
 # temporary editor files
 .DS_Store
