@@ -2,22 +2,34 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-    entry: {
-        index: "./src/index.js",
-        print: "./src/print.js",
-    },
     mode: "production",
+    entry: {
+        index: "./src/index.ts",
+    },
     output: {
-        filename: "[name].bundle.js",
+        filename: "[name].js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
     module: {
         rules: [
             {
-                test: /\.css/i,
-                use: ["css-loader"],
+                test: /\.css$/i,
+                use: "css-loader",
+                exclude: /node_modules/,
             },
+            {
+                test: /\/.tsx?$/i,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: [
+            ".ts",
+            ".tsx",
+            ".js",
         ],
     },
     // devtool: "inline-source-map", // remove in production!
