@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
     mode: "production",
     entry: {
-        index: "./src/index.ts",
+        index: "./src/index.tsx",
     },
     output: {
         filename: "[name].js",
@@ -15,11 +16,16 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: "css-loader",
+                // use: "css-loader",
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
                 exclude: /node_modules/,
             },
             {
-                test: /\/.tsx?$/i,
+                test: /\.tsx?$/i,
                 use: "ts-loader",
                 exclude: /node_modules/,
             },
@@ -40,8 +46,14 @@ module.exports = {
         runtimeChunk: "single",
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: "styles.css",
+            chunkFilename: "styles.css",
+        }),
         new HtmlWebpackPlugin({
             title: "Super Bubble Stacker",
+            template: "./src/index.html",
+            filename: "./index.html",
         }),
     ],
 }
