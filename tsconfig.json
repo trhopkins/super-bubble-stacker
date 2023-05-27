@@ -25,8 +25,8 @@
         "moduleResolution": "node"
     },
     "include": [
-        "server.ts",
-        "src/**/*.ts"
+        "src/**/*.ts",
+        "src/**/*.tsx",
     ],
     "exclude": [
         "node_modules",
