@@ -1,23 +1,48 @@
 import React from 'react'
 import './styles.css'
+import { Outlet, Route, Routes } from 'react-router'
+import { Link } from 'react-router-dom'
 
 const App = (): React.JSX.Element => {
   return (
-    <div className='wrapper'>
+    <Routes>
+      <Route path='/' element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
+      </Route>
+    </Routes>
+  )
+}
+
+const Layout = (): React.JSX.Element => {
+  return (
+    <div>
       <nav>
-        <div className='flex flex-col items-center mt-16'>TailwindCSS</div>
         <ul>
-          <li>Install</li>
-          <li>Docs</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
         </ul>
       </nav>
-      <div className='hero'>
-        <h1 className='header'>
-          Tailwind CSS makes styling React components easier!
-        </h1>
-        <button className='bg-black text-white p-2.5 w-fit mt-9'>Get Started</button>
-      </div>
+      <Outlet />
     </div>
+  )
+}
+
+const Home = (): React.JSX.Element => {
+  return (
+    <h1>Homepage</h1>
+  )
+}
+
+const About = (): React.JSX.Element => {
+  return (
+    <h1>About me.</h1>
   )
 }
 
