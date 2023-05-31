@@ -1,7 +1,9 @@
 import React from 'react'
 import './styles.css'
-import { Outlet, Route, Routes } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Route, Routes } from 'react-router'
+import Layout from './components/Layout'
+import About from './pages/About'
+import Home from './pages/Home'
 
 const App = (): React.JSX.Element => {
   return (
@@ -11,38 +13,6 @@ const App = (): React.JSX.Element => {
         <Route path='about' element={<About />} />
       </Route>
     </Routes>
-  )
-}
-
-const Layout = (): React.JSX.Element => {
-  return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />
-    </div>
-  )
-}
-
-const Home = (): React.JSX.Element => {
-  return (
-    <h1>Homepage</h1>
-  )
-}
-
-const About = (): React.JSX.Element => {
-  return (
-    <h1>About me.</h1>
   )
 }
 
