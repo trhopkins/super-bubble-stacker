@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-const Layout = (): React.JSX.Element => {
+const NavBar = (): React.JSX.Element => {
   return (
-    <div>
+    <>
       <nav>
         <ul><li><Link to="/">Home</Link></li></ul>
         <ul><li><Link to="/about">About</Link></li></ul>
@@ -13,8 +13,8 @@ const Layout = (): React.JSX.Element => {
         <ul><li><Link to="/settings">Settings</Link></li></ul>
       </nav>
       <Outlet />
-    </div>
+    </>
   )
 }
 
-export default Layout
+export default NavBar

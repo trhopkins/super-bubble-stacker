@@ -1,36 +1,24 @@
 {
-    "compilerOptions": {
-        "lib": [
-            "ES6",
-            "DOM"
-        ],
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "src/*",
-            ]
-        },
-        "module": "ES2020",
-        "target": "ES5",
-        "strict": true,
-        "alwaysStrict": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitAny": true,
-        "jsx": "react",
-        "skipLibCheck": true,
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "removeComments": true,
-        "moduleResolution": "node"
+  "compilerOptions": {
+    "lib": ["ES6", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "test/**/*.ts",
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-    ]
+    "module": "ES2020",
+    "target": "ES5",
+    "strict": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "removeComments": true,
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
 }
