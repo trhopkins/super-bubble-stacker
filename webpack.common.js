@@ -3,12 +3,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-  mode: 'production',
   entry: {
     index: './src/index.tsx'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true
   },
@@ -37,7 +36,6 @@ module.exports = {
       '.js'
     ]
   },
-  // devtool: 'inline-source-map', // remove in production!
   devServer: {
     static: './dist'
   },
