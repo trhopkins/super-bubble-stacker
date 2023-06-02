@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-const Layout = (): React.JSX.Element => {
+const NavBar = (): React.JSX.Element => {
   return (
     <div>
       <nav>
@@ -17,4 +17,4 @@ const Layout = (): React.JSX.Element => {
   )
 }
 
-export default Layout
+export default NavBar
