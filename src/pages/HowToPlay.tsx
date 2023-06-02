@@ -2,7 +2,7 @@ import React from 'react'
 
 const HowToPlay = (): React.JSX.Element => {
   return (
-    <h1>HowToPlay me.</h1>
+    <h1>This is the How To Play page.</h1>
   )
 }
 

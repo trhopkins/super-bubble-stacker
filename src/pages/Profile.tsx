@@ -2,7 +2,7 @@ import React from 'react'
 
 const Profile = (): React.JSX.Element => {
   return (
-    <h1>Profile me.</h1>
+    <h1>This is the Profile page.</h1>
   )
 }
 
