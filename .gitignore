@@ -1,7 +1,6 @@
 # Node-managed files
 node_modules/
 dist/
-package-lock.json
 
 # temporary editor files
 .vscode/
