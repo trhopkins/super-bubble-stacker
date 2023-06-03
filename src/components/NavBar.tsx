@@ -1,19 +1,29 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NavBar = (): React.JSX.Element => {
   return (
-    <>
-      <nav>
-        <ul><li><Link to="/">Home</Link></li></ul>
-        <ul><li><Link to="/about">About</Link></li></ul>
-        <ul><li><Link to="/how-to-play">How To Play</Link></li></ul>
-        <ul><li><Link to="/play">Play</Link></li></ul>
-        <ul><li><Link to="/profile">Profile</Link></li></ul>
-        <ul><li><Link to="/settings">Settings</Link></li></ul>
+    <header className="sticky top-0">
+      <nav className="py-1 flex flex-wrap drop-shadow-md bg-slate-100 justify-start">
+        <NavigationLink link='/' text='Super Bubble Stacker' />
+        <NavigationLink link='/play' text='Play' />
+        <NavigationLink link='/how-to-play' text='Tutorial' />
+        <NavigationLink link='/about' text='About' />
+        <NavigationLink link='/profile' text='Profile' />
+        <NavigationLink link='/settings' text='Settings' />
       </nav>
-      <Outlet />
-    </>
+    </header>
+  )
+}
+
+const NavigationLink = (props: { link: string, text: string }): React.JSX.Element => {
+  return (
+    <Link
+      to={props.link}
+      className='text-lg text-slate-900 select-all hover:bg-pink-200 px-2 border-blue-50'
+    >
+      {props.text}
+    </Link>
   )
 }
 
