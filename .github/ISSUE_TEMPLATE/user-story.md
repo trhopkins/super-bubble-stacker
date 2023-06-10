@@ -1,15 +1,15 @@
 ---
-name: User story
-about: User story template for sprint board
-title: As a [persona], I want to [need], so that I can [purpose]
+name: User Story
+about: User Story template for sprint board
+title: As a PERSONA, I want to NEED, so that I can PURPOSE
 labels: user story
 assignees: ''
 
 ---
 
-# Story Narrative
+# User Story
 
-*As a [persona], I want to [need], so that I can [purpose]*
+*As a PERSONA, I want to NEED, so that I can PURPOSE*
 
 ## Acceptance Criteria
 
@@ -19,4 +19,4 @@ assignees: ''
 
 - [ ] Sub-item to finish before marking complete
 - [ ] Be specific
-- [ ] Don't be afraid to edit this with more
+- [ ] Don't be afraid to edit this with more fields below
